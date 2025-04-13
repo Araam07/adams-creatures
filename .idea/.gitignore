@@ -1,0 +1,95 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# General
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.iml
+*.ipr
+*.iws
+*.bak
+*.swp
+*.swo
+*~
+*.orig
+
+# Gradle
+.gradle/
+build/
+out/
+bin/
+.gradletasknamecache
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+*.launch
+
+# Eclipse
+eclipse/
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Minecraft
+run/
+logs/
+crash-reports/
+screenshots/
+config/
+mods/
+resourcepacks/
+saves/
+options.txt
+usercache.json
+usernamecache.json
+launcher_profiles.json
+versions/
+
+# Gradle Wrapper
+!gradle-wrapper.jar
+
+# Local Mod Development
+local/
+dev-data/
+
+# Generated Files
+src/generated/
+src/main/resources/META-INF/mods.toml
+src/main/resources/META-INF/accesstransformer.cfg
+src/main/resources/data/
+src/main/resources/assets/
+*.json
+
+# Exclude but keep some important files
+!src/main/resources/META-INF/mods.toml
+!src/main/resources/pack.mcmeta
+!src/main/resources/assets/yourmodid/lang/en_us.json
+
+# Buildship
+buildship/
+
+# Fabric
+remappedSrc/
+
+# Personal IDE files
+.idea_modules/
