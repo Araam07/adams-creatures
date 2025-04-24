@@ -23,6 +23,12 @@ public class AdamsCreaturesModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(AdamsCreaturesModItems.FIRE_PHOENIX_SPAWN_EGG.get());
+			tabData.accept(AdamsCreaturesModItems.TEMPERATE_DIREWOLF_SPAWN_EGG.get());
+			tabData.accept(AdamsCreaturesModItems.COLD_DIREWOLF_SPAWN_EGG.get());
+			tabData.accept(AdamsCreaturesModItems.BUFFALO_SPAWN_EGG.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+			tabData.accept(AdamsCreaturesModItems.BUFFALO_MEAT.get());
+			tabData.accept(AdamsCreaturesModItems.COOKED_BUFFALO_MEAT.get());
 		}
 	}
 }

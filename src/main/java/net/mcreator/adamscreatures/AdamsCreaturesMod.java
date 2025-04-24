@@ -19,6 +19,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.adamscreatures.init.AdamsCreaturesModTabs;
+import net.mcreator.adamscreatures.init.AdamsCreaturesModSounds;
 import net.mcreator.adamscreatures.init.AdamsCreaturesModMenus;
 import net.mcreator.adamscreatures.init.AdamsCreaturesModItems;
 import net.mcreator.adamscreatures.init.AdamsCreaturesModEntities;
@@ -40,6 +41,7 @@ public class AdamsCreaturesMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+		AdamsCreaturesModSounds.REGISTRY.register(modEventBus);
 
 		AdamsCreaturesModItems.REGISTRY.register(modEventBus);
 		AdamsCreaturesModEntities.REGISTRY.register(modEventBus);
