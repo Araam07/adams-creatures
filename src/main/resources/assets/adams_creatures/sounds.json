@@ -1,0 +1,26 @@
+{
+  "wolfhowl": {
+    "sounds": [
+      {
+        "name": "adams_creatures:wolf-howl",
+        "stream": false
+      }
+    ]
+  },
+  "wolfgrowl": {
+    "sounds": [
+      {
+        "name": "adams_creatures:338674__newagesoup__wolf-growl",
+        "stream": false
+      }
+    ]
+  },
+  "wolfbite": {
+    "sounds": [
+      {
+        "name": "adams_creatures:mixkit-wolf-attack-1773",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "adams_creatures:item/buffalo_meat"
+  }
+}

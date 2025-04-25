@@ -18,6 +18,7 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.adamscreatures.network.AdamsCreaturesModVariables;
 import net.mcreator.adamscreatures.init.AdamsCreaturesModTabs;
 import net.mcreator.adamscreatures.init.AdamsCreaturesModSounds;
 import net.mcreator.adamscreatures.init.AdamsCreaturesModMenus;
@@ -46,6 +47,7 @@ public class AdamsCreaturesMod {
 		AdamsCreaturesModItems.REGISTRY.register(modEventBus);
 		AdamsCreaturesModEntities.REGISTRY.register(modEventBus);
 		AdamsCreaturesModTabs.REGISTRY.register(modEventBus);
+		AdamsCreaturesModVariables.ATTACHMENT_TYPES.register(modEventBus);
 
 		AdamsCreaturesModMenus.REGISTRY.register(modEventBus);
 

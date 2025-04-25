@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "id": "minecraft:packed_ice"
+    },
+    "title": {
+      "translate": "advancements.ragnarok_hero.title"
+    },
+    "description": {
+      "translate": "advancements.ragnarok_hero.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ragnarok_hero_0": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

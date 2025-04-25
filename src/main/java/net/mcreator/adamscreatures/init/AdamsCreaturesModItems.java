@@ -22,7 +22,7 @@ public class AdamsCreaturesModItems {
 	public static final DeferredItem<Item> BUFFALO_SPAWN_EGG = REGISTRY.register("buffalo_spawn_egg", () -> new DeferredSpawnEggItem(AdamsCreaturesModEntities.BUFFALO, -10079488, -12048384, new Item.Properties()));
 	public static final DeferredItem<Item> BUFFALO_MEAT = REGISTRY.register("buffalo_meat", BuffaloMeatItem::new);
 	public static final DeferredItem<Item> COOKED_BUFFALO_MEAT = REGISTRY.register("cooked_buffalo_meat", CookedBuffaloMeatItem::new);
-	public static final DeferredItem<Item> HORSE_SPAWN_EGG = REGISTRY.register("horse_spawn_egg", () -> new DeferredSpawnEggItem(AdamsCreaturesModEntities.HORSE, -1, -1, new Item.Properties()));
+	public static final DeferredItem<Item> HORSE_SPAWN_EGG = REGISTRY.register("horse_spawn_egg", () -> new DeferredSpawnEggItem(AdamsCreaturesModEntities.HORSE, -10079488, -13421773, new Item.Properties()));
 	// Start of user code block custom items
 	// End of user code block custom items
 }

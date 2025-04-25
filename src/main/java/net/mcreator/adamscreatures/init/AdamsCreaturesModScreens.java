@@ -10,11 +10,13 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.adamscreatures.client.gui.PhoenixUIScreen;
+import net.mcreator.adamscreatures.client.gui.NameTamedCreatureScreen;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class AdamsCreaturesModScreens {
 	@SubscribeEvent
 	public static void clientLoad(RegisterMenuScreensEvent event) {
 		event.register(AdamsCreaturesModMenus.PHOENIX_UI.get(), PhoenixUIScreen::new);
+		event.register(AdamsCreaturesModMenus.NAME_TAMED_CREATURE.get(), NameTamedCreatureScreen::new);
 	}
 }

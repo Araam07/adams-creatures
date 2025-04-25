@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "savanna",
+    "savanna_plateau",
+    "windswept_savanna",
+    "plains"
+  ],
+  "spawners": {
+    "type": "adams_creatures:buffalo",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "experience": 3,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "adams_creatures:buffalo_meat"
+  },
+  "result": {
+    "id": "adams_creatures:cooked_buffalo_meat"
+  }
+}

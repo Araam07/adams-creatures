@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "old_growth_spruce_taiga",
+    "old_growth_pine_taiga",
+    "snowy_taiga",
+    "snowy_slopes"
+  ],
+  "spawners": {
+    "type": "adams_creatures:cold_direwolf",
+    "weight": 20,
+    "minCount": 3,
+    "maxCount": 4
+  }
+}

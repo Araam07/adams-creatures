@@ -531,7 +531,7 @@
           }
         ]
       },
-      "path": "~/Global"
+      "path": "~/Global/NameTagSystem"
     },
     {
       "name": "BuffaloMeleeAttack",
@@ -1241,9 +1241,197 @@
         ]
       },
       "path": "~/Horse"
+    },
+    {
+      "name": "RenderShape",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_shape",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/RenderShapeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Global/HealthBar"
+    },
+    {
+      "name": "HealthBarBackground",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health_bar_background",
+      "metadata": {
+        "return_type": "shape",
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/HealthBarBackgroundProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Global/HealthBar"
+    },
+    {
+      "name": "HealthBarContent",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health_bar_content",
+      "metadata": {
+        "return_type": "shape",
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/HealthBarContentProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Global/HealthBar"
+    },
+    {
+      "name": "NameTamedCreature",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_tamed_creature",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/client/gui/NameTamedCreatureScreen.java",
+          "src/main/java/net/mcreator/adamscreatures/network/NameTamedCreatureButtonMessage.java",
+          "src/main/java/net/mcreator/adamscreatures/world/inventory/NameTamedCreatureMenu.java"
+        ]
+      },
+      "path": "~/Global/NameTagSystem"
+    },
+    {
+      "name": "HorseOnRightClick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horse_on_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/HorseOnRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Horse"
+    },
+    {
+      "name": "NameTamedCreatureThisGUIIsClosed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_tamed_creature_this_gui_is_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/NameTamedCreatureThisGUIIsClosedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Global/NameTagSystem"
+    },
+    {
+      "name": "NameTamedCreatureButton",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_tamed_creature_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/NameTamedCreatureButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Global"
+    },
+    {
+      "name": "HorseOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horse_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/HorseOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Horse"
+    },
+    {
+      "name": "SaveHorseData",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "save_horse_data",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/SaveHorseDataProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Horse"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "EntityClickedOn",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    }
+  ],
   "sound_elements": [
     {
       "name": "wolfhowl",
@@ -1283,27 +1471,30 @@
   "language_map": {
     "en_us": {
       "item.adams_creatures.temperate_direwolf_spawn_egg": "Direwolf Spawn Egg",
-      "entity.adams_creatures.fenrir": "Fenrir",
       "item.adams_creatures.fire_phoenix_spawn_egg": "Fire Phoenix Spawn Egg",
       "item.adams_creatures.buffalo_spawn_egg": "Buffalo Spawn Egg",
+      "gui.adams_creatures.name_tamed_creature.button_done": "Done",
       "advancements.ragnarok_hero.title": "Ragnarok Hero",
+      "entity.adams_creatures.cold_direwolf": "Direwolf",
+      "item.adams_creatures.fenrir_spawn_egg": "Fenrir Spawn Egg",
+      "item.adams_creatures.horse_spawn_egg": "Horse Spawn Egg",
+      "item.adams_creatures.cooked_buffalo_meat": "Cooked Buffalo Meat",
+      "gui.adams_creatures.name_tamed_creature.label_name_your_pet": "Name your pet",
+      "key.adams_creatures.use_ability": "Use Ability",
+      "entity.adams_creatures.fenrir": "Fenrir",
       "item.adams_creatures.zero_farenheit_projectile_spawn_egg": "Zero Farenheit Projectile Spawn Egg",
       "entity.adams_creatures.zero_farenheit_projectile": "Zero Farenheit Projectile",
       "entity.adams_creatures.fire_phoenix": "Fire Phoenix",
       "entity.adams_creatures.temperate_direwolf": "Direwolf",
       "item.adams_creatures.cold_direwolf_spawn_egg": "Direwolf Spawn Egg",
       "subtitles.wolfbite": "",
-      "entity.adams_creatures.cold_direwolf": "Direwolf",
       "entity.adams_creatures.buffalo": "Buffalo",
       "item.adams_creatures.buffalo_meat": "Buffalo Meat",
-      "item.adams_creatures.fenrir_spawn_egg": "Fenrir Spawn Egg",
-      "item.adams_creatures.horse_spawn_egg": "Horse Spawn Egg",
       "advancements.ragnarok_hero.descr": "You are the hero of the Ragnarok",
+      "gui.adams_creatures.name_tamed_creature.pet_name_input": "Text here",
       "subtitles.wolfhowl": "",
-      "item.adams_creatures.cooked_buffalo_meat": "Cooked Buffalo Meat",
       "subtitles.wolfgrowl": "",
-      "entity.adams_creatures.horse": "Horse",
-      "key.adams_creatures.use_ability": "Use Ability"
+      "entity.adams_creatures.horse": "Horse"
     }
   },
   "foldersRoot": {
@@ -1322,6 +1513,14 @@
         "children": [
           {
             "name": "Disabled",
+            "children": []
+          },
+          {
+            "name": "HealthBar",
+            "children": []
+          },
+          {
+            "name": "NameTagSystem",
             "children": []
           }
         ]

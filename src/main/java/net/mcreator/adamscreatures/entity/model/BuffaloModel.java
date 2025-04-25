@@ -1,0 +1,25 @@
+package net.mcreator.adamscreatures.entity.model;
+
+import software.bernie.geckolib.model.GeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+
+import net.mcreator.adamscreatures.entity.BuffaloEntity;
+
+public class BuffaloModel extends GeoModel<BuffaloEntity> {
+	@Override
+	public ResourceLocation getAnimationResource(BuffaloEntity entity) {
+		return ResourceLocation.parse("adams_creatures:animations/buffalo.animation.json");
+	}
+
+	@Override
+	public ResourceLocation getModelResource(BuffaloEntity entity) {
+		return ResourceLocation.parse("adams_creatures:geo/buffalo.geo.json");
+	}
+
+	@Override
+	public ResourceLocation getTextureResource(BuffaloEntity entity) {
+		return ResourceLocation.parse("adams_creatures:textures/entities/" + entity.getTexture() + ".png");
+	}
+
+}

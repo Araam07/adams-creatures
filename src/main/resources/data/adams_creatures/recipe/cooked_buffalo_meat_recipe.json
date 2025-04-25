@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "experience": 3,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "adams_creatures:buffalo_meat"
+  },
+  "result": {
+    "id": "adams_creatures:cooked_buffalo_meat"
+  }
+}

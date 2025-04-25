@@ -1,0 +1,57 @@
+package net.mcreator.adamscreatures.procedures;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.commands.arguments.EntityAnchorArgument;
+
+import net.mcreator.adamscreatures.entity.FenrirEntity;
+
+public class FenrirOnEntityTickUpdateProcedure {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
+			return;
+		if (!entity.getPersistentData().getBoolean("OnBattle")) {
+			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+				entity.getPersistentData().putBoolean("OnBattle", true);
+				entity.getPersistentData().putString("State", "Idle");
+				entity.setSprinting(true);
+				entity.getPersistentData().putDouble("IA", 0);
+				if (entity.getDeltaMovement().horizontalDistanceSqr() > 1.0E-6D) {
+					if (entity instanceof FenrirEntity) {
+						((FenrirEntity) entity).setAnimation("sprint");
+					}
+				}
+			}
+		} else {
+			if ((entity.getPersistentData().getString("State")).equals("Idle")) {
+				if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+					entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), y, ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
+				}
+				if (entity.getDeltaMovement().horizontalDistanceSqr() > 1.0E-6D) {
+					if (entity instanceof FenrirEntity) {
+						((FenrirEntity) entity).setAnimation("sprint");
+					}
+				} else {
+					if (entity instanceof FenrirEntity) {
+						((FenrirEntity) entity).setAnimation("idle");
+					}
+				}
+				FenrirAttackDetectionProcedure.execute(world, x, y, z, entity);
+			}
+			if ((entity.getPersistentData().getString("State")).equals("Bite")) {
+				FenrirBiteAttackProcedure.execute(world, x, y, z, entity);
+			}
+			if ((entity.getPersistentData().getString("State")).equals("IceMines")) {
+				FenrirIceMinesAttackProcedure.execute(world, x, y, z, entity);
+			}
+			if ((entity.getPersistentData().getString("State")).equals("Breath")) {
+				FenrirBreathAttackProcedure.execute(world, x, y, z, entity);
+			}
+			if ((entity.getPersistentData().getString("State")).equals("SummonPack")) {
+				FenrirSummonPackAttackProcedure.execute(world, x, y, z, entity);
+			}
+		}
+	}
+}

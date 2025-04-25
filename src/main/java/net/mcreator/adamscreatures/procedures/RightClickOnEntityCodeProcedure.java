@@ -75,6 +75,8 @@ public class RightClickOnEntityCodeProcedure {
 						phoenix.getX(), phoenix.getY() + 1.0, phoenix.getZ(),
 						10, 0.5, 0.5, 0.5, 0.2);
 				phoenix.playSound(SoundEvents.PLAYER_LEVELUP, 0.7f, 1.2f);
+				phoenix.getPersistentData().putBoolean("Tamed", true);
+
 			}
 		}
 	}
