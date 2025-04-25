@@ -1,0 +1,1575 @@
+{
+  "mod_elements": [
+    {
+      "name": "FirePhoenix",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_phoenix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/client/renderer/FirePhoenixRenderer.java",
+          "src/main/java/net/mcreator/adamscreatures/entity/model/FirePhoenixModel.java",
+          "src/main/resources/assets/adams_creatures/models/item/fire_phoenix_spawn_egg.json",
+          "src/main/java/net/mcreator/adamscreatures/entity/FirePhoenixEntity.java"
+        ]
+      },
+      "path": "~/FirePhoenix"
+    },
+    {
+      "name": "MakeFly",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "make_fly",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/MakeFlyProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Global/Disabled"
+    },
+    {
+      "name": "FirePhoenixOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_phoenix_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/FirePhoenixOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/FirePhoenix"
+    },
+    {
+      "name": "FirePhoenixRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_phoenix_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/FirePhoenixRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/FirePhoenix"
+    },
+    {
+      "name": "RightClickOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "right_click_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/RightClickOnEntityProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Global/Disabled"
+    },
+    {
+      "name": "RightClickOnEntityCode",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "right_click_on_entity_code",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/RightClickOnEntityCodeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Global"
+    },
+    {
+      "name": "MakeFlyCode",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "make_fly_code",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/MakeFlyCodeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Global"
+    },
+    {
+      "name": "UseAbilityOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/UseAbilityOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ability"
+    },
+    {
+      "name": "UseAbility",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/network/UseAbilityMessage.java"
+        ]
+      },
+      "path": "~/Ability"
+    },
+    {
+      "name": "PhoenixUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phoenix_ui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/world/inventory/PhoenixUIMenu.java",
+          "src/main/java/net/mcreator/adamscreatures/client/gui/PhoenixUIScreen.java"
+        ]
+      },
+      "path": "~/FirePhoenix"
+    },
+    {
+      "name": "TemperateDirewolf",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "temperate_direwolf",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/adams_creatures/models/item/temperate_direwolf_spawn_egg.json",
+          "src/main/resources/data/adams_creatures/neoforge/biome_modifier/temperate_direwolf_biome_modifier.json",
+          "src/main/java/net/mcreator/adamscreatures/entity/TemperateDirewolfEntity.java",
+          "src/main/java/net/mcreator/adamscreatures/client/renderer/TemperateDirewolfRenderer.java",
+          "src/main/java/net/mcreator/adamscreatures/entity/model/TemperateDirewolfModel.java"
+        ]
+      },
+      "path": "~/Direwolf"
+    },
+    {
+      "name": "ColdDirewolf",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cold_direwolf",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/adams_creatures/models/item/cold_direwolf_spawn_egg.json",
+          "src/main/java/net/mcreator/adamscreatures/client/renderer/ColdDirewolfRenderer.java",
+          "src/main/resources/data/adams_creatures/neoforge/biome_modifier/cold_direwolf_biome_modifier.json",
+          "src/main/java/net/mcreator/adamscreatures/entity/ColdDirewolfEntity.java",
+          "src/main/java/net/mcreator/adamscreatures/entity/model/ColdDirewolfModel.java"
+        ]
+      },
+      "path": "~/Direwolf"
+    },
+    {
+      "name": "ColdDirewolfThisEntityKillsAnotherOne",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cold_direwolf_this_entity_kills_another_one",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/ColdDirewolfThisEntityKillsAnotherOneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Direwolf"
+    },
+    {
+      "name": "Buffalo",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffalo",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/entity/model/BuffaloModel.java",
+          "src/main/resources/assets/adams_creatures/models/item/buffalo_spawn_egg.json",
+          "src/main/java/net/mcreator/adamscreatures/entity/BuffaloEntity.java",
+          "src/main/resources/data/adams_creatures/neoforge/biome_modifier/buffalo_biome_modifier.json",
+          "src/main/java/net/mcreator/adamscreatures/client/renderer/BuffaloRenderer.java"
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "BuffaloOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffalo_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/BuffaloOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "PlantOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plant_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/PlantOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Global"
+    },
+    {
+      "name": "PlantAttackCanel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plant_attack_canel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/PlantAttackCanelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Global"
+    },
+    {
+      "name": "PlantAttackDetection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plant_attack_detection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/PlantAttackDetectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Global"
+    },
+    {
+      "name": "PlantBiteAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plant_bite_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/PlantBiteAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Global"
+    },
+    {
+      "name": "PlantBreathAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plant_breath_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/PlantBreathAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Global"
+    },
+    {
+      "name": "PlantSpinAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plant_spin_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/PlantSpinAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Global/NameTagSystem"
+    },
+    {
+      "name": "BuffaloMeleeAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffalo_melee_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/BuffaloMeleeAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "BuffaloOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffalo_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/BuffaloOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "BuffaloAttackDetection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffalo_attack_detection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/BuffaloAttackDetectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "BuffaloCancelAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffalo_cancel_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/BuffaloCancelAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "BuffaloCharge",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffalo_charge",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/BuffaloChargeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "BuffaloMeat",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffalo_meat",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/adams_creatures/models/item/buffalo_meat.json",
+          "src/main/java/net/mcreator/adamscreatures/item/BuffaloMeatItem.java"
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "CookedBuffaloMeat",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooked_buffalo_meat",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/adams_creatures/models/item/cooked_buffalo_meat.json",
+          "src/main/java/net/mcreator/adamscreatures/item/CookedBuffaloMeatItem.java"
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "BuffaloKilled",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffalo_killed",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/adams_creatures/loot_table/entities/buffalo_killed.json"
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "BuffaloEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buffalo_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/BuffaloEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "CookedBuffaloMeatRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooked_buffalo_meat_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/adams_creatures/recipe/cooked_buffalo_meat_recipe.json"
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "CookedBuffaloMeatRecipeSmoked",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooked_buffalo_meat_recipe_smoked",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/adams_creatures/recipe/cooked_buffalo_meat_recipe_smoked.json"
+        ]
+      },
+      "path": "~/Buffalo"
+    },
+    {
+      "name": "ZeroFarenheitProjectile",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zero_farenheit_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/entity/model/ZeroFarenheitProjectileModel.java",
+          "src/main/java/net/mcreator/adamscreatures/entity/ZeroFarenheitProjectileEntity.java",
+          "src/main/java/net/mcreator/adamscreatures/client/renderer/ZeroFarenheitProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "ZeroFarenheitProjectileExplode",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zero_farenheit_projectile_explode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/ZeroFarenheitProjectileExplodeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "ZeroFarenheitProjectileOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zero_farenheit_projectile_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/ZeroFarenheitProjectileOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "ZeroFarenheitProjectileEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zero_farenheit_projectile_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/ZeroFarenheitProjectileEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "ZeroFarenheitProjectileOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zero_farenheit_projectile_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/ZeroFarenheitProjectileOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "Fenrir",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fenrir",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/client/renderer/FenrirRenderer.java",
+          "src/main/java/net/mcreator/adamscreatures/entity/model/FenrirModel.java",
+          "src/main/java/net/mcreator/adamscreatures/entity/FenrirEntity.java",
+          "src/main/java/net/mcreator/adamscreatures/entity/layer/FenrirLayer.java"
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "FenrirOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fenrir_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/FenrirOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "FenrirBreathAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fenrir_breath_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/FenrirBreathAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "FenrirAttackDetection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fenrir_attack_detection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/FenrirAttackDetectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "FenrirBiteAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fenrir_bite_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/FenrirBiteAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "FenrirOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fenrir_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/FenrirOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "FenrirIceMinesAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fenrir_ice_mines_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/FenrirIceMinesAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "FenrirCancelAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fenrir_cancel_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/FenrirCancelAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "FenrirSummonPackAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fenrir_summon_pack_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/FenrirSummonPackAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "FenrirBiteMarkedAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fenrir_bite_marked_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/FenrirBiteMarkedAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "RagnarokHero",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ragnarok_hero",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/adams_creatures/advancement/ragnarok_hero.json"
+        ]
+      },
+      "path": "~/Fenrir"
+    },
+    {
+      "name": "Horse",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/entity/HorseEntity.java",
+          "src/main/resources/data/adams_creatures/neoforge/biome_modifier/horse_biome_modifier.json",
+          "src/main/resources/assets/adams_creatures/models/item/horse_spawn_egg.json",
+          "src/main/java/net/mcreator/adamscreatures/client/renderer/HorseRenderer.java",
+          "src/main/java/net/mcreator/adamscreatures/entity/model/HorseModel.java"
+        ]
+      },
+      "path": "~/Horse"
+    },
+    {
+      "name": "RenderShape",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_shape",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/RenderShapeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Global/HealthBar"
+    },
+    {
+      "name": "HealthBarBackground",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health_bar_background",
+      "metadata": {
+        "return_type": "shape",
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/HealthBarBackgroundProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Global/HealthBar"
+    },
+    {
+      "name": "HealthBarContent",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health_bar_content",
+      "metadata": {
+        "return_type": "shape",
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/HealthBarContentProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Global/HealthBar"
+    },
+    {
+      "name": "NameTamedCreature",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_tamed_creature",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/client/gui/NameTamedCreatureScreen.java",
+          "src/main/java/net/mcreator/adamscreatures/network/NameTamedCreatureButtonMessage.java",
+          "src/main/java/net/mcreator/adamscreatures/world/inventory/NameTamedCreatureMenu.java"
+        ]
+      },
+      "path": "~/Global/NameTagSystem"
+    },
+    {
+      "name": "HorseOnRightClick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horse_on_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/HorseOnRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Horse"
+    },
+    {
+      "name": "NameTamedCreatureThisGUIIsClosed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_tamed_creature_this_gui_is_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/NameTamedCreatureThisGUIIsClosedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Global/NameTagSystem"
+    },
+    {
+      "name": "NameTamedCreatureButton",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_tamed_creature_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/NameTamedCreatureButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Global"
+    },
+    {
+      "name": "HorseOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horse_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/HorseOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Horse"
+    },
+    {
+      "name": "MakePlayerStopRiding",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "make_player_stop_riding",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/MakePlayerStopRidingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Global"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "EntityClickedOn",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "wolfhowl",
+      "files": [
+        "wolf-howl"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "wolfgrowl",
+      "files": [
+        "338674__newagesoup__wolf-growl"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "wolfbite",
+      "files": [
+        "mixkit-wolf-attack-1773"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    }
+  ],
+  "tag_elements": {
+    "ENTITIES:mod:rideable": [
+      "CUSTOM:FirePhoenix"
+    ],
+    "ITEMS:minecraft:meat": [
+      "~CUSTOM:CookedBuffaloMeat",
+      "~CUSTOM:BuffaloMeat"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "item.adams_creatures.temperate_direwolf_spawn_egg": "Direwolf Spawn Egg",
+      "item.adams_creatures.fire_phoenix_spawn_egg": "Fire Phoenix Spawn Egg",
+      "item.adams_creatures.buffalo_spawn_egg": "Buffalo Spawn Egg",
+      "gui.adams_creatures.name_tamed_creature.button_done": "Done",
+      "advancements.ragnarok_hero.title": "Ragnarok Hero",
+      "entity.adams_creatures.cold_direwolf": "Direwolf",
+      "item.adams_creatures.fenrir_spawn_egg": "Fenrir Spawn Egg",
+      "item.adams_creatures.horse_spawn_egg": "Horse Spawn Egg",
+      "item.adams_creatures.cooked_buffalo_meat": "Cooked Buffalo Meat",
+      "gui.adams_creatures.name_tamed_creature.label_name_your_pet": "Name your pet",
+      "key.adams_creatures.use_ability": "Use Ability",
+      "entity.adams_creatures.fenrir": "Fenrir",
+      "item.adams_creatures.zero_farenheit_projectile_spawn_egg": "Zero Farenheit Projectile Spawn Egg",
+      "entity.adams_creatures.zero_farenheit_projectile": "Zero Farenheit Projectile",
+      "entity.adams_creatures.fire_phoenix": "Fire Phoenix",
+      "entity.adams_creatures.temperate_direwolf": "Direwolf",
+      "item.adams_creatures.cold_direwolf_spawn_egg": "Direwolf Spawn Egg",
+      "subtitles.wolfbite": "",
+      "entity.adams_creatures.buffalo": "Buffalo",
+      "item.adams_creatures.buffalo_meat": "Buffalo Meat",
+      "advancements.ragnarok_hero.descr": "You are the hero of the Ragnarok",
+      "gui.adams_creatures.name_tamed_creature.pet_name_input": "Text here",
+      "subtitles.wolfhowl": "",
+      "subtitles.wolfgrowl": "",
+      "entity.adams_creatures.horse": "Horse"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "FirePhoenix",
+        "children": []
+      },
+      {
+        "name": "Ability",
+        "children": []
+      },
+      {
+        "name": "Global",
+        "children": [
+          {
+            "name": "Disabled",
+            "children": []
+          },
+          {
+            "name": "HealthBar",
+            "children": []
+          },
+          {
+            "name": "NameTagSystem",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Direwolf",
+        "children": []
+      },
+      {
+        "name": "Buffalo",
+        "children": []
+      },
+      {
+        "name": "Fenrir",
+        "children": []
+      },
+      {
+        "name": "Horse",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "adams_creatures",
+    "modName": "Adams Creatures",
+    "version": "1.0.0",
+    "author": "adami, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
+    "currentGenerator": "neoforge-1.21.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.adamscreatures"
+  },
+  "mcreatorVersion": 202400452410
+}
