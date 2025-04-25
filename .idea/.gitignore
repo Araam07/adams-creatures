@@ -93,3 +93,4 @@ remappedSrc/
 
 # Personal IDE files
 .idea_modules/
+/.name
