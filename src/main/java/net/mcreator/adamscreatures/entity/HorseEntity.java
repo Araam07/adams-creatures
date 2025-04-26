@@ -42,14 +42,18 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.adamscreatures.procedures.HorseOnRightClickProcedure;
-import net.mcreator.adamscreatures.procedures.HorseOnEntityTickUpdateProcedure;
+import net.mcreator.adamscreatures.procedures.HorseRightClickedOnEntityProcedure;
+import net.mcreator.adamscreatures.procedures.HorseOnEntityTickUpdaterProcedure;
 import net.mcreator.adamscreatures.init.AdamsCreaturesModEntities;
 
 public class HorseEntity extends PathfinderMob implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(HorseEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(HorseEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(HorseEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Boolean> DATA_isSaddled = SynchedEntityData.defineId(HorseEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Boolean> DATA_isTamed = SynchedEntityData.defineId(HorseEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> DATA_texture_variant = SynchedEntityData.defineId(HorseEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> DATA_armor_type = SynchedEntityData.defineId(HorseEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -68,6 +72,10 @@ public class HorseEntity extends PathfinderMob implements GeoEntity {
 		builder.define(SHOOT, false);
 		builder.define(ANIMATION, "undefined");
 		builder.define(TEXTURE, "horse_mustang");
+		builder.define(DATA_isSaddled, false);
+		builder.define(DATA_isTamed, false);
+		builder.define(DATA_texture_variant, "");
+		builder.define(DATA_armor_type, "no_armor");
 	}
 
 	public void setTexture(String texture) {
@@ -108,6 +116,10 @@ public class HorseEntity extends PathfinderMob implements GeoEntity {
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
+		compound.putBoolean("DataisSaddled", this.entityData.get(DATA_isSaddled));
+		compound.putBoolean("DataisTamed", this.entityData.get(DATA_isTamed));
+		compound.putString("Datatexture_variant", this.entityData.get(DATA_texture_variant));
+		compound.putString("Dataarmor_type", this.entityData.get(DATA_armor_type));
 	}
 
 	@Override
@@ -115,6 +127,14 @@ public class HorseEntity extends PathfinderMob implements GeoEntity {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Texture"))
 			this.setTexture(compound.getString("Texture"));
+		if (compound.contains("DataisSaddled"))
+			this.entityData.set(DATA_isSaddled, compound.getBoolean("DataisSaddled"));
+		if (compound.contains("DataisTamed"))
+			this.entityData.set(DATA_isTamed, compound.getBoolean("DataisTamed"));
+		if (compound.contains("Datatexture_variant"))
+			this.entityData.set(DATA_texture_variant, compound.getString("Datatexture_variant"));
+		if (compound.contains("Dataarmor_type"))
+			this.entityData.set(DATA_armor_type, compound.getString("Dataarmor_type"));
 	}
 
 	@Override
@@ -129,14 +149,14 @@ public class HorseEntity extends PathfinderMob implements GeoEntity {
 		Entity entity = this;
 		Level world = this.level();
 
-		HorseOnRightClickProcedure.execute(world, x, y, z, entity, sourceentity, itemstack);
+		HorseRightClickedOnEntityProcedure.execute(world, x, y, z, entity, sourceentity, itemstack);
 		return retval;
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		HorseOnEntityTickUpdateProcedure.execute();
+		HorseOnEntityTickUpdaterProcedure.execute(this);
 		this.refreshDimensions();
 	}
 
@@ -189,7 +209,7 @@ public class HorseEntity extends PathfinderMob implements GeoEntity {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 20);
+		builder = builder.add(Attributes.MAX_HEALTH, 40);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);

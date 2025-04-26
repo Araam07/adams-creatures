@@ -2,7 +2,7 @@
   "workspacePanelIconSize": "TILES",
   "workspacePanelSortType": "CREATED",
   "workspacePanelSortAscending": true,
-  "projectBrowserSplitPos": 221,
+  "projectBrowserSplitPos": 0,
   "projectBrowserState": {
     "expandedPaths": [
       "[, Adams Creatures]",
@@ -10,7 +10,6 @@
       "[, Adams Creatures, Source (Gradle), C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net]",
       "[, Adams Creatures, Source (Gradle), C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net, C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net\\mcreator]",
       "[, Adams Creatures, Source (Gradle), C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net, C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net\\mcreator, C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net\\mcreator\\adamscreatures]",
-      "[, Adams Creatures, Source (Gradle), C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net, C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net\\mcreator, C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net\\mcreator\\adamscreatures, C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net\\mcreator\\adamscreatures\\entity]",
       "[, Adams Creatures, Source (Gradle), C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net, C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net\\mcreator, C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net\\mcreator\\adamscreatures, C:\\Users\\adami.DESKTOP-3IM5UMR\\MCreatorWorkspaces\\adams_creatures\\src\\main\\java\\net\\mcreator\\adamscreatures\\procedures]"
     ]
   }

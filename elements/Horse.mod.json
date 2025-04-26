@@ -12,7 +12,28 @@
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "entityDataEntries": [],
+    "entityDataEntries": [
+      {
+        "name": "isSaddled",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "name": "isTamed",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "name": "texture_variant",
+        "type": "string",
+        "value": ""
+      },
+      {
+        "name": "armor_type",
+        "type": "string",
+        "value": "no_armor"
+      }
+    ],
     "modelWidth": 1.2,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
@@ -62,7 +83,7 @@
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 20,
+    "health": 40,
     "xpAmount": 40,
     "waterMob": false,
     "flyingMob": false,
@@ -107,13 +128,14 @@
       "value": ""
     },
     "onRightClickedOn": {
-      "name": "HorseOnRightClick"
+      "name": "HorseRightClickedOnEntity"
     },
     "onMobTickUpdate": {
-      "name": "HorseOnEntityTickUpdate"
+      "name": "HorseOnEntityTickUpdater"
     },
     "hasAI": true,
     "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"></xml>",
     "model": "horse.geo.json",
     "groupName": "head",
     "animation1": "idle",

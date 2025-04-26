@@ -1307,49 +1307,6 @@
       "path": "~/Global/NameTagSystem"
     },
     {
-      "name": "HorseOnRightClick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "horse_on_right_click",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adamscreatures/procedures/HorseOnRightClickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Horse"
-    },
-    {
       "name": "NameTamedCreatureThisGUIIsClosed",
       "type": "procedure",
       "compiles": true,
@@ -1396,30 +1353,78 @@
       "path": "~/Global"
     },
     {
-      "name": "HorseOnEntityTickUpdate",
+      "name": "HorseOnEntityTick",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "horse_on_entity_tick_update",
+      "registry_name": "horse_on_entity_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/adamscreatures/procedures/HorseOnEntityTickUpdateProcedure.java"
+          "src/main/java/net/mcreator/adamscreatures/procedures/HorseOnEntityTickProcedure.java"
         ],
         "dependencies": []
       },
       "path": "~/Horse"
     },
     {
-      "name": "SaveHorseData",
+      "name": "HorseRightClickedOnEntity",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "save_horse_data",
+      "registry_name": "horse_right_clicked_on_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/adamscreatures/procedures/SaveHorseDataProcedure.java"
+          "src/main/java/net/mcreator/adamscreatures/procedures/HorseRightClickedOnEntityProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Horse"
+    },
+    {
+      "name": "HorseOnEntityTickUpdater",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horse_on_entity_tick_updater",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/HorseOnEntityTickUpdaterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Horse"
     }

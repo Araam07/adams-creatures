@@ -25,21 +25,26 @@ public class FenrirOnEntityTickUpdateProcedure {
 				}
 			}
 		} else {
+			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+				entity.getPersistentData().putDouble("Patience", 0);
+			} else {
+				entity.getPersistentData().putDouble("Patience", (entity.getPersistentData().getDouble("Patience") + 1));
+			}
 			if ((entity.getPersistentData().getString("State")).equals("Idle")) {
 				if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 					entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), y, ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
 				}
-				if (entity.getDeltaMovement().horizontalDistanceSqr() > 1.0E-6D) {
-					if (entity instanceof FenrirEntity) {
-						((FenrirEntity) entity).setAnimation("sprint");
-					}
-				} else {
-					if (entity instanceof FenrirEntity) {
-						((FenrirEntity) entity).setAnimation("idle");
-					}
-				}
-				FenrirAttackDetectionProcedure.execute(world, x, y, z, entity);
 			}
+			if (entity.getDeltaMovement().horizontalDistanceSqr() > 1.0E-6D) {
+				if (entity instanceof FenrirEntity) {
+					((FenrirEntity) entity).setAnimation("sprint");
+				}
+			} else {
+				if (entity instanceof FenrirEntity) {
+					((FenrirEntity) entity).setAnimation("idle");
+				}
+			}
+			FenrirAttackDetectionProcedure.execute(world, x, y, z, entity);
 			if ((entity.getPersistentData().getString("State")).equals("Bite")) {
 				FenrirBiteAttackProcedure.execute(world, x, y, z, entity);
 			}
@@ -52,6 +57,11 @@ public class FenrirOnEntityTickUpdateProcedure {
 			if ((entity.getPersistentData().getString("State")).equals("SummonPack")) {
 				FenrirSummonPackAttackProcedure.execute(world, x, y, z, entity);
 			}
+		}
+		if (entity.getPersistentData().getDouble("Patience") == 200) {
+			entity.getPersistentData().putDouble("IA", 0);
+			entity.getPersistentData().putDouble("Patience", 0);
+			entity.getPersistentData().putBoolean("OnBattle", false);
 		}
 	}
 }
