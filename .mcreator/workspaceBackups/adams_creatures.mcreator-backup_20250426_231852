@@ -1353,6 +1353,20 @@
       "path": "~/Global"
     },
     {
+      "name": "HorseOnEntityTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horse_on_entity_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/adamscreatures/procedures/HorseOnEntityTickProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Horse"
+    },
+    {
       "name": "HorseRightClickedOnEntity",
       "type": "procedure",
       "compiles": true,
@@ -1404,25 +1418,6 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/adamscreatures/procedures/HorseOnEntityTickUpdaterProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Horse"
-    },
-    {
-      "name": "HorseOnInitialEntitySpawn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "horse_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adamscreatures/procedures/HorseOnInitialEntitySpawnProcedure.java"
         ],
         "dependencies": [
           {

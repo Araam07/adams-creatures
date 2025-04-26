@@ -24,14 +24,14 @@
         "value": false
       },
       {
-        "name": "texture_variant",
-        "type": "string",
-        "value": ""
-      },
-      {
         "name": "armor_type",
         "type": "string",
         "value": "no_armor"
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "value": ""
       }
     ],
     "modelWidth": 1.2,
@@ -79,7 +79,7 @@
     "attackStrength": 3,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.30000000000000004,
+    "movementSpeed": 0.25,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
@@ -132,6 +132,9 @@
     },
     "onMobTickUpdate": {
       "name": "HorseOnEntityTickUpdater"
+    },
+    "onInitialSpawn": {
+      "name": "HorseOnInitialEntitySpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",

@@ -1413,25 +1413,6 @@
         ]
       },
       "path": "~/Horse"
-    },
-    {
-      "name": "HorseOnInitialEntitySpawn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "horse_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/adamscreatures/procedures/HorseOnInitialEntitySpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Horse"
     }
   ],
   "variable_elements": [

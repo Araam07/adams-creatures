@@ -26,24 +26,22 @@ public class HorseOnEntityTickUpdaterProcedure {
 			if (entity instanceof HorseEntity _datEntL7 && _datEntL7.getEntityData().get(HorseEntity.DATA_isSaddled) && entity instanceof HorseEntity) {
 				if ((entity instanceof HorseEntity _datEntS ? _datEntS.getEntityData().get(HorseEntity.DATA_armor_type) : "").equals("diamond_armor")) {
 					HorseEntity horse = (HorseEntity) entity;
-					String currentTexture = horse.getTexture();
-					if (!currentTexture.endsWith("_saddled_diamond_armor")) {
-						if (currentTexture.endsWith("_saddled")) {
-							horse.setTexture(currentTexture + "_diamond_armor");
-						}
+					String baseTexture = horse.getEntityData().get(HorseEntity.DATA_variant);
+					if (!horse.getTexture().equals(baseTexture + "_saddled_diamond_armor")) {
+						horse.setTexture(baseTexture + "_saddled_diamond_armor");
 					}
 				} else {
 					HorseEntity horse = (HorseEntity) entity;
-					String currentTexture = horse.getTexture();
-					if (!currentTexture.endsWith("_saddled")) {
-						horse.setTexture(currentTexture + "_saddled");
+					String baseTexture = horse.getEntityData().get(HorseEntity.DATA_variant);
+					if (!horse.getTexture().equals(baseTexture + "_saddled")) {
+						horse.setTexture(baseTexture + "_saddled");
 					}
 				}
 			} else if (entity instanceof HorseEntity) {
 				HorseEntity horse = (HorseEntity) entity;
-				String currentTexture = horse.getTexture();
-				if (currentTexture.endsWith("_saddled")) {
-					horse.setTexture(currentTexture.replace("_saddled", ""));
+				String baseTexture = horse.getEntityData().get(HorseEntity.DATA_variant);
+				if (!horse.getTexture().equals(baseTexture)) {
+					horse.setTexture(baseTexture);
 				}
 			}
 		}

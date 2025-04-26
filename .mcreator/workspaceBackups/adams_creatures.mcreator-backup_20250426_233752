@@ -1398,7 +1398,7 @@
     {
       "name": "HorseOnEntityTickUpdater",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "horse_on_entity_tick_updater",
       "metadata": {
